@@ -1,0 +1,33 @@
+export const PRESENT = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "Firebase",
+  "jQuery",
+  "Next.js",
+  "Redux",
+  "TypeScript",
+  "Zeit",
+  "Gatsby",
+  "Sass",
+  "Apollo GraphQL",
+  "GraphQL",
+];
+
+export const SKILLS = [
+  "codes",
+  "designs",
+  "naps",
+  "debugs",
+  "makes mistakes",
+  "coaches",
+  "helps",
+  "tries his best",
+  "jokes",
+  "tweets",
+  "lives",
+  "creates bugs",
+  "fixes bugs",
+];
