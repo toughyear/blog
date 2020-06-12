@@ -1,8 +1,8 @@
 ---
-title: "Persist Dark Mode with React"
+title: "This is a test blog my friends"
 date: "2020-05-10"
 og:
-  description: "How to persist dark mode with ReactJS"
+  description: "Description of the test blog"
   image: "https://telmo.im/og/persistdarkmodereact.png"
 author:
   twitter: "RajeevSinghN"

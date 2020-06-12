@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import "../styles/base.css";
 
 function MyApp({ Component, pageProps }) {
@@ -13,21 +12,17 @@ function MyApp({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
-        <meta property="og:title" content={title || `Rajeev, code & design`} />
-        <meta property="og:site_name" content="Rajeev, code & design" />
+        <meta property="og:title" content={title || `Rajeev Singh Naruka`} />
+        <meta property="og:site_name" content="Rajeev Singh Naruka" />
         <meta
           property="og:description"
-          content={
-            og
-              ? og.description
-              : `My blog: Code, Design and poorly executed jokes`
-          }
+          content={og ? og.description : `My blog: Growth, dev and startups`}
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@RajeevSinghN" />
         <meta
           property="og:image"
-          content={og ? og.image : `https://telmo.im/og/default.png`}
+          content={og ? og.image : `https://rajeevnaruka.com/og/uses.png`}
         />
 
         <script
@@ -36,7 +31,7 @@ function MyApp({ Component, pageProps }) {
           charSet="utf-8"
         ></script>
 
-        <title>{title || `Rajeev, code & design`}</title>
+        <title>{title || `Rajeev Singh Naruka`}</title>
       </Head>
 
       <Component {...pageProps} />

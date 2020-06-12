@@ -19,6 +19,8 @@ export const PRESENT = [
 export const SKILLS = [
   "codes",
   "designs",
+  "makes projects",
+  "games",
   "naps",
   "debugs",
   "makes mistakes",

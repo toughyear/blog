@@ -95,6 +95,16 @@ function About() {
               Twitter
             </a>
             . That's where I usually hangout.
+            <br />
+            Thanks to{" "}
+            <a
+              href="https://twitter.com/telmo"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Telmo
+            </a>{" "}
+            for opensourcing this blog built with NextJS.
           </div>
         </div>
       </Layout>

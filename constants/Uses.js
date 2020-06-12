@@ -1,5 +1,20 @@
 export const USES = [
   {
+    title: "Where you can find me?",
+    stack: [
+      {
+        name: "IndieHackers",
+        description: "A community of creative people working on projects",
+        link: "https://www.indiehackers.com/",
+      },
+      {
+        name: "Twitter",
+        description: "follow me!",
+        link: "https://twitter.com/RajeevSinghN",
+      },
+    ],
+  },
+  {
     title: "Coding & Design",
     stack: [
       {

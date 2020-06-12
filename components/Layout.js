@@ -92,10 +92,9 @@ function Layout({ children, isHomepage, secondaryPage, noHead = false }) {
                 className={`blog-title`}
                 style={isHomepage && { textAlign: "left" }}
               >
-                Blog, code <span className="amp">&</span> design
+                Code, Growth <span className="amp">&</span> Startups
               </h1>
             )}
-
             {children}
           </Col>
         </Row>
