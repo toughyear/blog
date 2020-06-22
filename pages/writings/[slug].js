@@ -60,6 +60,10 @@ function Writing({ content, data }) {
                 },
               }}
             />
+            <script
+              type="text/javascript"
+              src="https://campaigns.zoho.in/js/zc.iframe.js"
+            ></script>
 
             <div className="twitter-follow">
               If you liked this post I'm sure you'll love what I usually share
@@ -72,6 +76,14 @@ function Writing({ content, data }) {
               </a>
               , I share a lot of Growth & coding tips there ✌️
             </div>
+
+            {/* <div>
+              <iframe
+                frameborder="0"
+                id="iframewin"
+                src="https://zc1.maillist-manage.in/ua/Optin?od=1a1e3dadb9e63&zx=1df8833c44&lD=171fd23339f2eb3&n=11699f7503a7dbf&sD=171fd23339f2eb1"
+              ></iframe>
+            </div> */}
           </div>
         </div>
       </Layout>
