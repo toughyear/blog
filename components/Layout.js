@@ -13,10 +13,6 @@ const menu = [
     name: "Blog",
   },
   {
-    path: "/about",
-    name: "about",
-  },
-  {
     path: "/uses",
     name: "more",
   },
@@ -65,7 +61,7 @@ function Layout({
 
   return (
     <>
-      <div className="top-menu sticky top-0">
+      <div className="top-menu z-10 sticky top-0 bg-bg-color bg-opacity-100">
         <Row>
           <Col xs={6}>
             <ul>

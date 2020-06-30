@@ -3,14 +3,36 @@ export const USES = [
     title: "Where you can find me?",
     stack: [
       {
+        name: "Twitter",
+        description: "follow me!",
+        link: "https://twitter.com/RajeevSinghN",
+      },
+      {
         name: "IndieHackers",
         description: "A community of creative people working on projects",
         link: "https://www.indiehackers.com/",
       },
+    ],
+  },
+  {
+    title: "Books I would suggest",
+    stack: [
       {
-        name: "Twitter",
-        description: "follow me!",
-        link: "https://twitter.com/RajeevSinghN",
+        name: "Atomic Habits",
+        description: "By James Clear",
+        link: "https://www.amazon.in/Atomic-Habits-James-Clear/dp/1847941834",
+      },
+      {
+        name: "Hooked: How to Build Habit-Forming Products",
+        description: "By Nir Eyal and Ryan Hoover",
+        link:
+          "https://www.amazon.in/Hooked-How-Build-Habit-Forming-Products/dp/1591847788",
+      },
+      {
+        name: "The Mom Test",
+        description: "By Robert Fitzpatrick",
+        link:
+          "https://www.amazon.in/Mom-Test-customers-business-everyone-ebook/dp/B01H4G2J1U",
       },
     ],
   },

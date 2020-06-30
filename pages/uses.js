@@ -1,18 +1,20 @@
 import React from "react";
-import Head from "next/head";
 
 import Layout from "../components/Layout";
 import { USES } from "../constants/Uses";
 
 function Uses({ og }) {
+  const avatar = `https://images.weserv.nl/?url=https://unavatar.now.sh/twitter/RajeevSinghN`;
   return (
     <>
+      <img className="about-avatar" src={avatar} />
       <Layout secondaryPage>
-        <h1 className="uses-h1">What I use</h1>
+        <h1 className="uses-h1">Just so you know...</h1>
 
         <div className="uses-intro">
-          I often get asked about what's my setup as well as what I use to share
-          all the tips I usually post on{" "}
+          In my free time, I am often scrolling through my twitter feed,
+          stumbling on interesing blogs or dreaming after reading documentations
+          of new frameworks. I sometime also share information tidbits on my{" "}
           <a
             href="https://twitter.com/RajeevSinghN"
             target="_blank"
@@ -20,7 +22,7 @@ function Uses({ og }) {
           >
             Twitter
           </a>
-          , so here it is.
+          , so don't forget to follow me there.
         </div>
 
         {USES.map(({ title, stack }) => (

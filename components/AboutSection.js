@@ -49,7 +49,7 @@ export default function AboutSection() {
               <h1 className="font-ibm-mono text-2xl text-brand-blue">
                 1. About Me
               </h1>
-              <h1 className="about-h1">
+              <h1 className="about-h1 ">
                 Rajeev{" "}
                 <TextTransition
                   text={SKILLS[index % SKILLS.length]}
@@ -93,16 +93,6 @@ export default function AboutSection() {
                   ))}
                 </Row>
                 <hr />
-                Follow me on{" "}
-                <a
-                  href="https://twitter.com/RajeevSinghN"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  Twitter
-                </a>
-                . That's where I usually hangout.
-                <br />
               </div>
             </div>
           </Col>

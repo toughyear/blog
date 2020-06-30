@@ -1,6 +1,6 @@
 import React from "react";
 import { FeaturedProjects, OtherProjects } from "../constants/Projects";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiOutlineCode } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
 import { GiAstronautHelmet } from "react-icons/gi";
 
@@ -25,47 +25,71 @@ export default function ProjectsSection() {
           />
 
           <div className="flex flex-col md:text-right justify-center items-start md:items-end md:ml-10">
-            <h1 className="text-brand-blue font-bold font-ibm-mono">
+            <h1 className="text-brand-blue mt-10 md:mt-0 font-bold font-ibm-mono">
               Featured Project
             </h1>
             <h1 className="font-bold my-2 bg-highlighted">{project.title}</h1>
             <p className="mb-4">{truncate(project.Description, 250)}</p>
-            <h1 className="font-ibm-mono">
+            <h1 className="font-ibm-mono text-sm text-brand-blue flex flex-wrap">
               {project.stack.map((item) => (
-                <span>{item}&nbsp;</span>
+                <span key={item}>{item}&nbsp;</span>
               ))}
             </h1>
             <div className="flex md:justify-end text-3xl mt-6">
               {project.github && (
-                <a href="https://www.youtube.com/">
-                  <AiFillGithub />
+                <a href={project.github} target="_blank">
+                  <AiFillGithub className="hover:text-brand-blue" />
                 </a>
               )}
               {project.live && (
-                <a href="https://www.youtube.com/" className="ml-5">
-                  <FiExternalLink />
+                <a href={project.live} target="_blank" className="ml-5">
+                  <FiExternalLink className="hover:text-brand-blue" />
                 </a>
               )}
             </div>
           </div>
         </div>
       ))}
-      <h1 className="font-ibm-mono text-2xl text-brand-blue mt-20">
-        And some more...
+
+      <hr className="mt-20" />
+      <h1 className="font-ibm-mono text-2xl text-brand-blue ">
+        3. And some more...
       </h1>
       <h1 className="about-intro mt-10">
         Here are Some of my other past projects, if you wish to explore. &nbsp;
         <GiAstronautHelmet className="inline text-brand-blue text-2xl" />
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div className="py-10 px-5 shadow-xl hover:shadow-2xl ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-          dolorem deleniti, debitis iure blanditiis, a labore vero ipsa maxime
-          voluptate, fugit tenetur cupiditate at quibusdam suscipit autem quo
-          officia. Error quis et quisquam illo voluptates. Vero doloremque porro
-          esse, accusamus voluptate ducimus, itaque minima placeat odit quo
-          debitis mollitia voluptatem?
-        </div>
+        {OtherProjects.map((project) => (
+          <div
+            key={project.title}
+            className="flex flex-col items-start py-10 px-5 shadow-xl hover:shadow-2xl push-up"
+          >
+            <div className="flex text-3xl justify-between w-full">
+              <AiOutlineCode />
+              <div className="flex">
+                {project.github && (
+                  <a href={project.github} target="_blank">
+                    <AiFillGithub className="hover:text-brand-blue" />
+                  </a>
+                )}
+
+                {project.live && (
+                  <a href={project.live} target="_blank" className="ml-5">
+                    <FiExternalLink className="hover:text-brand-blue" />
+                  </a>
+                )}
+              </div>
+            </div>
+            <h1 className="font-bold my-2 bg-highlighted">{project.title}</h1>
+            <p className="mb-4">{truncate(project.Description, 250)}</p>
+            <h1 className="font-ibm-mono text-sm text-brand-blue flex flex-wrap mt-auto">
+              {project.stack.map((item) => (
+                <span key={item}>{item}&nbsp;</span>
+              ))}
+            </h1>
+          </div>
+        ))}
       </div>
     </div>
   );
