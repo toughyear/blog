@@ -22,7 +22,13 @@ const menu = [
   },
 ];
 
-function Layout({ children, isBlog, secondaryPage, noHead = false }) {
+function Layout({
+  children,
+  isBlog,
+  isHomePage,
+  secondaryPage,
+  noHead = false,
+}) {
   const onLoadTheme =
     typeof localStorage !== "undefined" && localStorage.getItem("BLOG_THEME");
   const [theme, setTheme] = useState(onLoadTheme);
@@ -50,15 +56,16 @@ function Layout({ children, isBlog, secondaryPage, noHead = false }) {
   }, [theme]);
 
   const containerProps = {
+    ...(isHomePage && { md: 10, mdOffset: 1 }),
     ...(isBlog && { md: 12 }),
-    ...(!isBlog && { md: 8, mdOffset: 2 }),
+    ...(secondaryPage && { md: 8, mdOffset: 1 }),
   };
 
   if (!mounted) return <div />;
 
   return (
     <>
-      <div className="top-menu">
+      <div className="top-menu sticky top-0">
         <Row>
           <Col xs={6}>
             <ul>
@@ -86,7 +93,7 @@ function Layout({ children, isBlog, secondaryPage, noHead = false }) {
       <Grid>
         <Row>
           <Col {...containerProps}>
-            {!secondaryPage && (
+            {isBlog && (
               <h1
                 className={`blog-title`}
                 style={isBlog && { textAlign: "left" }}

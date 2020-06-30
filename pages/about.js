@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import simpleIcons from "simple-icons";
-import Head from "next/head";
 import { Row, Col } from "react-flexbox-grid";
 import dynamic from "next/dynamic";
 import { config } from "react-spring";

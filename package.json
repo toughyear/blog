@@ -13,21 +13,27 @@
   "author": "Rajeev Singh Naruka <@rajeevSinghN>",
   "license": "ISC",
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
+    "autoprefixer": "^9.8.4",
     "gray-matter": "^4.0.2",
     "next": "^9.3.5",
     "next-transpile-modules": "^2.3.1",
+    "postcss-import": "^12.0.1",
     "raw-loader": "^4.0.1",
     "react": "^16.13.1",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.4",
     "react-flexbox-grid": "^2.1.2",
+    "react-icons": "^3.10.0",
     "react-markdown": "^4.3.1",
     "react-scroll-progress-bar": "^1.1.12",
     "react-syntax-highlighter": "^12.2.1",
     "react-text-transition": "^1.0.2",
-    "simple-icons": "^2.9.0"
-  }
+    "simple-icons": "^2.9.0",
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {}
 }
