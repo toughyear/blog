@@ -6,6 +6,10 @@ import Link from "next/link";
 const menu = [
   {
     path: "/",
+    name: "Home",
+  },
+  {
+    path: "/blog",
     name: "Blog",
   },
   {
@@ -14,11 +18,11 @@ const menu = [
   },
   {
     path: "/uses",
-    name: "uses",
+    name: "more",
   },
 ];
 
-function Layout({ children, isHomepage, secondaryPage, noHead = false }) {
+function Layout({ children, isBlog, secondaryPage, noHead = false }) {
   const onLoadTheme =
     typeof localStorage !== "undefined" && localStorage.getItem("BLOG_THEME");
   const [theme, setTheme] = useState(onLoadTheme);
@@ -46,8 +50,8 @@ function Layout({ children, isHomepage, secondaryPage, noHead = false }) {
   }, [theme]);
 
   const containerProps = {
-    ...(isHomepage && { md: 12 }),
-    ...(!isHomepage && { md: 8, mdOffset: 2 }),
+    ...(isBlog && { md: 12 }),
+    ...(!isBlog && { md: 8, mdOffset: 2 }),
   };
 
   if (!mounted) return <div />;
@@ -58,11 +62,6 @@ function Layout({ children, isHomepage, secondaryPage, noHead = false }) {
         <Row>
           <Col xs={6}>
             <ul>
-              <li>
-                <Link href="https://rajeevnaruka.com/" passHref={true}>
-                  Home
-                </Link>
-              </li>
               {menu.map(({ path, name }) => (
                 <li key={name}>
                   <Link href={path} as={path}>
@@ -90,7 +89,7 @@ function Layout({ children, isHomepage, secondaryPage, noHead = false }) {
             {!secondaryPage && (
               <h1
                 className={`blog-title`}
-                style={isHomepage && { textAlign: "left" }}
+                style={isBlog && { textAlign: "left" }}
               >
                 Code, Growth <span className="amp">&</span> Startups
               </h1>
