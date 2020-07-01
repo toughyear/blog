@@ -27,7 +27,7 @@ export const FeaturedProjects = [
   },
   {
     title: "React Chat App",
-    image: "reactChatApp.png",
+    image: "react-chat-app.png",
     Description:
       "Built a room-based real-time chat app with react.js using socket.io and node.js. Backend deployed on Heroku and front-end was deployed on Netlify.",
     stack: ["reactjs", "node.js", "socket.io"],
@@ -36,7 +36,7 @@ export const FeaturedProjects = [
   },
   {
     title: "Clinic Mars",
-    image: "ClinicMars.png",
+    image: "clinic-mars.png",
     Description:
       "ClinicMars is sub-organization of a YC-backed startup in health sector. I handled all the tech parts from fullstack development to hosting on Netlify and CI/CD, integration with Ghost blog API, Spam protection by Google Recaptcha.",
     stack: ["reactjs", "tailwindCSS", "GhostAPI", "ReCaptcha", "AWS-EC2"],
