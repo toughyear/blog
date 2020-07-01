@@ -2,7 +2,7 @@
 export const FeaturedProjects = [
   {
     title: "Personal Site V1.0",
-    image: "oldsite.png",
+    image: "old-site.png",
     Description:
       "My first attempt at making a personal site using Bootstrap CSS framework and some fancy particles using particleJS.",
     stack: ["Bootstrap 4.0", "particles.js", "html", "css", "js"],
@@ -11,7 +11,7 @@ export const FeaturedProjects = [
   },
   {
     title: "React Github Gists NPM Package",
-    image: "npm-package.png",
+    image: "react-github-gists.png",
     Description:
       "My first NPM package that I published. A dead simple yet powerful react component to embed a single gist or all gists from a Github user in your react application.",
     stack: ["reactjs", "NPM", "Github API"],
@@ -20,7 +20,7 @@ export const FeaturedProjects = [
   },
   {
     title: "HelloVorld - A AR/VR Startup",
-    image: "hellovorld.png",
+    image: "hello-vorld.png",
     Description:
       "HelloVoRld is an AR/VR solutions related startup in furnishing domain. I was worked on the main site, integrated with backend Zoho CRM, real-time chat integration, among other tasks.",
     stack: ["Magic360", "Zoho CRM", "CrispChat API"],
