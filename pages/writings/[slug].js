@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import Head from "next/head";
 import ProgressBar from "react-scroll-progress-bar";
-
+import InnerHTML from "dangerously-set-html-content";
 import Layout from "../../components/Layout";
 import CodeBlock from "../../components/CodeBlock";
 
@@ -12,6 +12,9 @@ function Writing({ content, data }) {
   const frontmatter = data;
   const { title, author } = frontmatter;
   const avatar = `https://images.weserv.nl/?url=https://unavatar.now.sh/twitter/${author.twitter}&w=40`;
+  const convertkit = `
+  <script async data-uid="ca6e738f5c" src="https://colossal-maker-600.ck.page/ca6e738f5c/index.js"></script>
+  `;
 
   return (
     <>
@@ -77,13 +80,7 @@ function Writing({ content, data }) {
               , I share a lot of Growth & coding tips there ✌️
             </div>
 
-            {/* <div>
-              <iframe
-                frameborder="0"
-                id="iframewin"
-                src="https://zc1.maillist-manage.in/ua/Optin?od=1a1e3dadb9e63&zx=1df8833c44&lD=171fd23339f2eb3&n=11699f7503a7dbf&sD=171fd23339f2eb1"
-              ></iframe>
-            </div> */}
+            <InnerHTML html={convertkit} className="mt-10" />
           </div>
         </div>
       </Layout>
