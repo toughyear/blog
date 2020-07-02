@@ -1,0 +1,4 @@
+Sitemap: https://rajeevnaruka.com/api/posts-sitemap
+
+User-agent: *
+Allow: /*
