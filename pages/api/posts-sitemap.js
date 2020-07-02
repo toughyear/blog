@@ -16,7 +16,7 @@ export default async (req, res) => {
     // Create each URL row
     filenames.forEach((post) => {
       smStream.write({
-        url: `/writings/${post}`,
+        url: `/writings/${path.parse(post).name}`,
         changefreq: "daily",
         priority: 0.9,
       });
