@@ -12,18 +12,47 @@ function MyApp({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
-        <meta property="og:title" content={title || `Rajeev Singh Naruka`} />
-        <meta property="og:site_name" content="Rajeev Singh Naruka" />
+
+        {/* Primary Meta Tags  */}
+        <meta
+          name="description"
+          content="I blog about React, NextJS, TailwindCSS, GraphQL, Firebase, and everything related to web-development or indie hacking and also share about the projects I am working on."
+        />
+
+        {/* Open Graph / Facebook  */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rajeevnaruka.com/" />
+        <meta
+          property="og:title"
+          content="Rajeev Singh Naruka - I build things for the web"
+        />
         <meta
           property="og:description"
-          content={og ? og.description : `My blog: Growth, dev and startups`}
+          content="I blog about React, NextJS, TailwindCSS, GraphQL, Firebase, and everything related to web-development or indie hacking and also share about the projects I am working on."
         />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@RajeevSinghN" />
         <meta
           property="og:image"
-          content={og ? og.image : `https://rajeevnaruka.com/og/uses.png`}
+          content="https://rajeevnaruka.com/og/mysite-homepage.png"
         />
+
+        {/* Twitter  */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://rajeevnaruka.com/" />
+        <meta
+          property="twitter:title"
+          content="Rajeev Singh Naruka - I build things for the web"
+        />
+        <meta
+          property="twitter:description"
+          content="I blog about React, NextJS, TailwindCSS, GraphQL, Firebase, and everything related to web-development or indie hacking and also share about the projects I am working on."
+        />
+        <meta
+          property="twitter:image"
+          content="https://rajeevnaruka.com/og/mysite-homepage.png"
+        />
+
+        <meta property="og:site_name" content="Rajeev Singh Naruka" />
+        <meta name="twitter:site" content="@RajeevSinghN" />
 
         <script
           async
@@ -31,7 +60,9 @@ function MyApp({ Component, pageProps }) {
           charSet="utf-8"
         ></script>
 
-        <title>{title || `Rajeev Singh Naruka`}</title>
+        <title>
+          {title || `Rajeev Singh Naruka - I build things for the web`}
+        </title>
       </Head>
 
       <Component {...pageProps} />

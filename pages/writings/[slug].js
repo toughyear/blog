@@ -1,6 +1,7 @@
 import React from "react";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
+const { encode } = require("url-encode-decode");
 import Link from "next/link";
 import Head from "next/head";
 import ProgressBar from "react-scroll-progress-bar";
@@ -10,7 +11,7 @@ import CodeBlock from "../../components/CodeBlock";
 
 function Writing({ content, data }) {
   const frontmatter = data;
-  const { title, author } = frontmatter;
+  const { title, author, og } = frontmatter;
   const avatar = `https://images.weserv.nl/?url=https://unavatar.now.sh/twitter/${author.twitter}&w=40`;
   const convertkit = `
   <script async data-uid="ca6e738f5c" src="https://colossal-maker-600.ck.page/ca6e738f5c/index.js"></script>
@@ -18,6 +19,58 @@ function Writing({ content, data }) {
 
   return (
     <>
+      <Head>
+        {/* Primary Meta Tags  */}
+        <meta
+          name="description"
+          content={
+            og
+              ? og.description
+              : `I blog about React, NextJS, TailwindCSS, GraphQL, Firebase, and everything related to web-development or indie hacking and also share about the projects I am working on.`
+          }
+        />
+
+        {/* Open Graph / Facebook  */}
+        <meta property="og:title" content={title} />
+        <meta
+          property="og:description"
+          content={
+            og
+              ? og.description
+              : `I blog about React, NextJS, TailwindCSS, GraphQL, Firebase, and everything related to web-development or indie hacking and also share about the projects I am working on.`
+          }
+        />
+        <meta
+          property="og:image"
+          content={
+            og
+              ? `https://og-image.now.sh/${encode(
+                  title
+                )}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg`
+              : `https://rajeevnaruka.com/og/mysite-homepage.png`
+          }
+        />
+        {/* Twitter  */}
+        <meta property="twitter:title" content={title} />
+        <meta
+          property="twitter:description"
+          content={
+            og
+              ? og.description
+              : `I blog about React, NextJS, TailwindCSS, GraphQL, Firebase, and everything related to web-development or indie hacking and also share about the projects I am working on.`
+          }
+        />
+        <meta
+          property="twitter:image"
+          content={
+            og
+              ? `https://og-image.now.sh/${encode(
+                  title
+                )}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg`
+              : `https://rajeevnaruka.com/og/mysite-homepage.png`
+          }
+        />
+      </Head>
       <div className="writing-progress">
         <ProgressBar height="5px" />
       </div>
