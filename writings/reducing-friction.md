@@ -2,7 +2,7 @@
 title: "Reducing Friction: Making products that stick "
 date: "2020-06-13"
 og:
-  description: "Description of the test blog"
+  description: "As a product designer, you goal is to reduce friction your users experience on every step of using your product. Help them make that decision."
   image: "https://telmo.im/og/persistdarkmodereact.png"
 author:
   twitter: "RajeevSinghN"
