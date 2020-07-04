@@ -1,7 +1,6 @@
 import React from "react";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
-const { encode } = require("url-encode-decode");
 import Link from "next/link";
 import Head from "next/head";
 import ProgressBar from "react-scroll-progress-bar";
@@ -22,6 +21,7 @@ function Writing({ content, data }) {
       <Head>
         {/* Primary Meta Tags  */}
         <meta
+          key="description"
           name="description"
           content={
             og
@@ -31,8 +31,9 @@ function Writing({ content, data }) {
         />
 
         {/* Open Graph / Facebook  */}
-        <meta property="og:title" content={title} />
+        <meta key="og:title" property="og:title" content={title} />
         <meta
+          key="og:description"
           property="og:description"
           content={
             og
@@ -41,18 +42,18 @@ function Writing({ content, data }) {
           }
         />
         <meta
+          key="og:image"
           property="og:image"
           content={
             og
-              ? `https://og-image.now.sh/${encode(
-                  title
-                )}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg`
+              ? `https://og-image.now.sh/${title}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg`
               : `https://rajeevnaruka.com/og/mysite-homepage.png`
           }
         />
         {/* Twitter  */}
-        <meta property="twitter:title" content={title} />
+        <meta key="twitter:title" property="twitter:title" content={title} />
         <meta
+          key="twitter:description"
           property="twitter:description"
           content={
             og
@@ -61,12 +62,11 @@ function Writing({ content, data }) {
           }
         />
         <meta
+          key="twitter:image"
           property="twitter:image"
           content={
             og
-              ? `https://og-image.now.sh/${encode(
-                  title
-                )}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg`
+              ? `https://og-image.now.sh/${title}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg`
               : `https://rajeevnaruka.com/og/mysite-homepage.png`
           }
         />

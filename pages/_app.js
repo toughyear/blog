@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
 
         {/* Primary Meta Tags  */}
         <meta
+          key="description"
           name="description"
           content="I blog about React, NextJS, TailwindCSS, GraphQL, Firebase, and everything related to web-development or indie hacking and also share about the projects I am working on."
         />
@@ -23,14 +24,17 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://rajeevnaruka.com/" />
         <meta
+          key="og:title"
           property="og:title"
           content="Rajeev Singh Naruka - I build things for the web"
         />
         <meta
+          key="og:description"
           property="og:description"
           content="I blog about React, NextJS, TailwindCSS, GraphQL, Firebase, and everything related to web-development or indie hacking and also share about the projects I am working on."
         />
         <meta
+          key="og:image"
           property="og:image"
           content="https://rajeevnaruka.com/og/mysite-homepage.png"
         />
@@ -39,14 +43,17 @@ function MyApp({ Component, pageProps }) {
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://rajeevnaruka.com/" />
         <meta
+          key="twitter:title"
           property="twitter:title"
           content="Rajeev Singh Naruka - I build things for the web"
         />
         <meta
+          key="twitter:description"
           property="twitter:description"
           content="I blog about React, NextJS, TailwindCSS, GraphQL, Firebase, and everything related to web-development or indie hacking and also share about the projects I am working on."
         />
         <meta
+          key="twitter:image"
           property="twitter:image"
           content="https://rajeevnaruka.com/og/mysite-homepage.png"
         />

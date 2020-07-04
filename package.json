@@ -36,8 +36,7 @@
     "react-tweet-embed": "^1.2.2",
     "simple-icons": "^2.9.0",
     "sitemap": "^6.1.7",
-    "tailwindcss": "^1.4.6",
-    "url-encode-decode": "^1.0.0"
+    "tailwindcss": "^1.4.6"
   },
   "devDependencies": {}
 }
