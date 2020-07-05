@@ -77,7 +77,7 @@ function Writing({ content, data }) {
 
       <Layout secondaryPage noHead>
         <div style={{ marginTop: 50 }}>
-          <Link href="/" as="/">
+          <Link href="/blog" as="/blog">
             <a className="back-button">back</a>
           </Link>
           <h1 className="writing-title-h1">{title}</h1>

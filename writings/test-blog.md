@@ -3,7 +3,6 @@ title: "This is a test blog my friends"
 date: "2020-05-10"
 og:
   description: "Description of the test blog"
-  image: "https://telmo.im/og/persistdarkmodereact.png"
 author:
   twitter: "RajeevSinghN"
   name: "Rajeev Singh Naruka"
