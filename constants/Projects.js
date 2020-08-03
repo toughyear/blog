@@ -1,6 +1,15 @@
 //ss
 export const FeaturedProjects = [
   {
+    title: "Dynamic News Site",
+    image: "news-site-homepage.png",
+    Description:
+      "a Dynamic news website using NextJS (a ReactJS framework) and Prismic (a headless CMS) for managing and publishing all the articles. Uses dynamic routing and server-side rendering.",
+    stack: ["NextJS", "Prismic.io", "SSR", "dynamic routing"],
+    live: "https://channel21.vercel.app/",
+    github: "https://github.com/toughyear/nextjs-prismic-news-site",
+  },
+  {
     title: "Personal Site V1.0",
     image: "old-site.png",
     Description:
